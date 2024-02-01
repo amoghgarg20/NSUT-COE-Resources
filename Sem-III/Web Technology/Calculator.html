@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        body{
+            background-color: powderblue;
+        }
+        .container{
+            text-align: center;
+            font-size: 35px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(28, 38, 68);
+            color: seashell;
+            padding: auto;
+            margin: 2px;
+            border: 3px solid white;
+        }
+        .answer{
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(28, 38, 68);
+            color: seashell;
+            padding: auto;
+            margin: 2px;
+            border: 3px solid white;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Basic Calculator</h1>
+    </div>
+    <div class="answer">
+        <h3>1.Add</h3>
+        <h3>2.Subtract</h3>
+        <h3>3.Multiply</h3>
+        <h3>4.Divide</h3>
+        <span id="abc"></span>
+    </div>
+    <script>
+        const operator = prompt('Enter operator ( either +, -, * or / ): ');
+        const number1 = parseFloat(prompt('Enter first number: '));
+        const number2 = parseFloat(prompt('Enter second number: '));
+        let result;
+        if (operator == '+') {
+            result = number1 + number2;
+        }
+        else if (operator == '-') {
+            result = number1 - number2;
+        }
+        else if (operator == '*') {
+            result = number1 * number2;
+        }
+        else {
+            result = number1 / number2;
+        }
+        document.getElementById("abc").innerHTML="Answer is:"+result;
+    </script>
+</body>
+</html>

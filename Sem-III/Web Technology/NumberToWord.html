@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Word</title>
+</head>
+<body>
+    <div class="container"></div>
+    <script>
+        function convert(){
+            var n=prompt("Enter the number");
+            var m=ReverseString("n");
+            let num=parseInt(m);
+            if(isNaN(num)){
+                alert("Not a Number");
+            }
+            else if (num<0 || num>999){
+                alert("Out of Range");
+            }
+            else{
+                var words="";
+                while(num){
+                    var a=num%10;
+                    num=Math.floor(num/10);
+                    switch(a){
+                        case 0:words+="Zero ";break;
+                        case 1:words+="One ";break;
+                        case 2:words+="Two ";break;
+                        case 3:words+="Three ";break;
+                        case 4:words+="Four ";break;
+                        case 5:words+="Five ";break;
+                        case 6:words+="Six ";break;
+                        case 7:words+="Seven ";break;
+                        case 8:words+="Eight ";break;
+                        default:words+="Nine ";
+                    }
+                }
+                document.getElementById("container").innerHTML=num+" in words is "+words;
+                }
+            }
+            function ReverseString(str) {
+                if(!str || str.length < 2 || 
+                        typeof str!== 'string') {
+                    return 'Not valid'; 
+                }
+                const revArray = [];
+                const length = str.length - 1;
+                for(let i = length; i >= 0; i--) {
+                    revArray.push(str[i]);
+                }
+                 return revArray.join('');
+            }
+            convert();
+        </script>
+</body>
+</html>

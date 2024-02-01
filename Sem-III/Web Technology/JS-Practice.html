@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment</title>
+</head>
+<style>
+    .Clock{
+        font-size: 25px;
+        background-color: plum;
+        color: purple;
+        border: 3px solid white;
+        border-radius: 2px;
+        margin:auto;
+        padding: 2px;
+    }
+    label,input{
+        display:block;
+    } 
+</style>
+<body>
+    <div class="Clock">
+        Current Time and Date is:<span id="time"></span>
+    </div>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptates dolore sapiente? A iste corrupti nam fugit soluta cupiditate debitis quidem, explicabo placeat animi alias porro doloribus dolorem. Cumque, ducimus!</p>
+    <div>
+        <p>Select your favourite colour:</p>
+        <form action="" method="post" id="MyForm">
+            <select id="mySelect">
+                <option>Red</option>
+                <option>Green</option>
+                <option>Blue</option>
+                <option>White</option>
+            </select>  
+            <input type="button" onclick="getOptions()" value="Count and Output all items">
+        </form>
+    </div>
+    <script>
+        setInterval(updatetime,1000);
+        function updatetime(){
+            time.innerHTML=new Date();
+        }
+        console.log("URL is: ",document.URL);
+        function check(x){
+            return ((Math.abs(100 - x) <= 20) || (Math.abs(400 - x) <= 20));
+        }
+        console.log("Input:15 Output:",check(15));
+        console.log("Input:95 Output:",check(95));
+        console.log("Input:80 Output:",check(80));
+        para=document.getElementById("para");
+        para.style.background="rgb(73, 31, 73)";
+        para.style.color="white";
+        para.style.border="2px solid white";
+        function getOptions(){
+            let x=document.getElementById("mySelect");
+            let txt = "No. of items : ";
+            let i;
+            l=document.getElementById("mySelect").length;  
+            txt=txt+l;
+            for (i=0;i<x.length;i++){
+                txt=txt + "\n" + x.options[i].text;
+            }
+            alert(txt);
+        }
+    </script>
+</body>
+</html>

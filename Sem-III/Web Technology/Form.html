@@ -1,0 +1,169 @@
+<!-- Defines the XML version -->
+<?xml version="1.0"?>
+<!-- Tells us about the document type -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <!--Styling of the web page using CSS -->
+    <style>
+        body{
+            background-color:#80a0c5; /*Provides the background color to the body using Hex-Code*/
+        }
+        h1{
+            /* Changes the color,allignment,font size and font style of Heading-1 */
+            color: rgb(84 17 72);
+            text-align: center;
+            font-size: 40px;
+            font-family: "Papyrus";
+        }
+        h3{
+            /* Changes the color,allignment,font size and font style of Heading-3 */
+            color: rgb(114 24 108);
+            text-align: center;
+            font-size: 30px;
+            font-family: "Lucida Console";
+        }
+        table,td{
+            /* Styling the table */
+            background-color: rgb(108 174 182);
+            /* This alligns the table at the center */
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid rgb(83 68 168);
+            border-radius: 3px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        td:hover {
+            /* Color changes whenever cursor is placed over particular cell */
+            background-color: rgb(177, 47, 119);
+        }
+        /* Aligns the Submit and Reset button at the center */
+        .container{  
+            text-align: center;   
+        } 
+        .button{
+            background:#5a9fd8; /* Hex-Code */
+            color:#fff; /* Short Hex-Code */
+            border:2px solid #016ABC ;
+            border-radius:20px;
+        }
+        /* Changes whenever cursor is placed over the Button */
+        .button:hover{
+            background:#016ABC;
+            color:#fff;
+            border:2px solid #016ABC;
+            border-radius:20px;
+        } 
+        /* Formatting the input boxes */
+        input[type="text"]{
+            background-color: rgb(214 235 238) ;
+            border: 1px solid black;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        input[type="email"]{
+            background-color: rgb(214 235 238);
+            border: 1px solid black;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        input[type="number"]{
+            background-color: rgb(214 235 238);
+            border: 1px solid black;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        input[type="date"]{
+            background-color: rgb(214 235 238);
+            border: 1px solid black;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<!-- Body of the Web Page -->
+<body>
+    <h1>FORM</h1>
+    <!-- Marquee is used to make a piece of text move across the width of the page -->
+    <h3><marquee>Personal Information</marquee></h3>
+    <!-- Horizontal Rule -->
+    <hr/>
+    <!-- Starting of the Table -->
+    <table>
+        <!-- Starting of the Form -->
+        <form>
+        <tr>
+            <!-- Inline Styling has been used for each row -->
+            <td style="color: rgb(44, 60, 133);"><b>Name</b></td>
+            <td><input type="text" placeholder="Enter Name..."/></td> <!--Input type text -->
+        </tr>
+        <tr>
+            <td style="color: rgb(44, 60, 133);"><b>Date Of Birth</b></td>
+            <!-- Input type "Date" has been used to take date as input -->
+            <td><input type="date"/></td>
+        </tr>
+        <tr>
+            <td style="color: rgb(44, 60, 133);"><b>Gender</b></td>
+            <td>
+                <!-- Make Radio Buttons,can be selected one at a time -->
+                <label>
+                    <input type="radio" name="gender" value="Male" checked>Male</label>
+                <label>
+                    <input type="radio" name="gender" value="Female">Female</label>
+                <label>
+                    <input type="radio" name="gender" value="Other">Other</label>
+            </td>
+        </tr>
+        <tr>
+            <td style="color: rgb(44, 60, 133);"><b>Father's Name</b></td>
+            <td><input type="text" placeholder="Enter Father's Name..."/></td>
+        </tr>
+        <tr>
+            <td style="color: rgb(44, 60, 133);"><b>Mother's Name</b></td>
+            <td><input type="text" placeholder="Enter Mothers's Name..."/></td>
+        </tr>
+        <tr>
+            <td style="color: rgb(44, 60, 133);"><b>Address</b></td>
+            <!-- Size has been used to resize the input text box -->
+            <td><input type="text" placeholder="Enter Address..."/ size="50"></td>
+        </tr>
+        <tr>
+            <td style="color: rgb(44, 60, 133);"><b>State</b></td>
+            <td><input type="text" placeholder="Enter State..."/></td>
+        </tr>
+        <tr>
+            <td style="color: rgb(44, 60, 133);"><b>E-Mail</b></td>
+            <!-- Input type email to take email as input -->
+            <td><input type="email" placeholder="Enter Email-ID..."/></td>
+        </tr>
+        <tr>
+            <td style="color: rgb(44, 60, 133);"><b>Contact Number</b></td>
+            <td><input type="number" placeholder="Enter Contact Number..."/></td>
+        </tr>
+        <tr>
+            <td style="color: rgb(44, 60, 133);"><b>College</b></td>
+            <td><input type="text" placeholder="Enter College Name..."/></td>
+        </tr>
+        <tr>
+            <td style="color: rgb(44, 60, 133);"><b>Degree</b></td>
+            <td><input type="text" placeholder="Enter Degree..."/></td>
+        </tr>
+    </table>
+    <br/>
+    <!-- End of Table -->
+    <!-- Submit and Reset Buttons -->
+    <div class="container">
+        <input type="submit" value="Submit" class="button">
+        <input type="reset" value="Reset" class="button"> 
+    </div>
+</form>  
+  <!-- End of Form  -->
+</body>
+<!-- End of Body -->
+</html>
